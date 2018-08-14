@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Friend Finder | Home</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+
+<body>
+	<header class="text-center">
+		<h1>Friend Finder</h1>
+		<p>Take the survey to find your new friend!</p>
+	</header>
+
+	<div class="container survey">
+		<form class="col-sm-12 col-lg-8 col-lg-offset-2">
+
+			<div class="form-group">
+				<label>Name (required)</label>
+				<input id="name" type="text" class="form-control" placeholder="Jon" required/>
+			</div>
+			<div class="form-group">
+				<label>Photo link (required)</label>
+				<input id="photo" type="text" class="form-control" placeholder="http://yourphoto.com" required/>
+			</div>
+
+			<p>
+				<strong>Answer the following questions from 1 (Strongly Disagree) to 5 (Strongly Agree).</strong>
+			</p>
+
+			<div class="form-group">
+				<label>1. You enjoy reading in your spare time.</label>
+				<select class="chosen-select" id="q1" type="number">
+					<option value="default" disabled selected>Select</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>2. One of your favorite foods is pizza.</label>
+				<select class="chosen-select" id="q2" type="number">
+					<option value="default" disabled selected>Select</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>3. Game of Thrones is the best show on television.</label>
+				<select class="chosen-select" id="q3" type="number">
+					<option value="default" disabled selected>Select</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>4. You enjoy thrills such as skydiving.</label>
+				<select class="chosen-select" id="q4" type="number">
+					<option value="default" disabled selected>Select</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>5. You enjoy going to the beach.</label>
+				<select class="chosen-select" id="q5" type="number">
+					<option value="default" disabled selected>Select</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>6. You enjoy going to the gym and working out.</label>
+				<select class="chosen-select" id="q6" type="number">
+					<option value="default" disabled selected>Select</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>7. You enjoy outdoor activities such as camping or hiking.</label>
+				<select class="chosen-select" id="q7" type="number">
+					<option value="default" disabled selected>Select</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>8. You like to listen to music while driving.</label>
+				<select class="chosen-select" id="q8" type="number">
+					<option value="default" disabled selected>Select</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>9. You enjoy cooking food at home.</label>
+				<select class="chosen-select" id="q9" type="number">
+					<option value="default" disabled selected>Select</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>10. You dislike reptiles such as snakes.</label>
+				<select class="chosen-select" id="q10" type="number">
+					<option value="default" disabled selected>Select</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<button type="submit" class="btn btn-info" id="submit">Find my match!</button>
+
+		</form>
+	</div>
+
+	<div id="results-modal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"></button>
+					<h2 class="modal-title text-center">
+						<strong>Best Match</strong>
+					</h2>
+				</div>
+				<div class="modal-body text-center">
+					<h2 id="matchName"></h2>
+					<img id="matchImg" width=90% />
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var config = {
+			".option-select": {},
+			".option-select-deselect": { allow_single_deselect: true },
+			".option-select-no-single": { disable_search_threshold: 10 },
+			".option-select-no-results": { no_results_text: "Nothing found!" },
+			".option-select-width": { width: "95%" }
+		}
+		for (var selector in config) {
+			$(selector).chosen(config[selector]);
+		}
+
+		$("#submit").on("click", function(event) {
+			event.preventDefault();
+
+			function validateForm() {
+				var isValid = true;
+				$(".form-control").each(function() {
+					if ($(this).val() === "") {
+						isValid = false;
+					}
+				});
+
+				$(".chosen-select").each(function() {
+					if ($(this).val() === "") {
+						isValid = false;
+					}
+				});
+				return isValid;
+			}
+
+			if (validateForm()) {
+				var userData = {
+					name: $("#name").val().trim(),
+					photo: $("#photo").val().trim(),
+					scores: [
+						$("#q1").val(),
+						$("#q2").val(),
+						$("#q3").val(),
+						$("#q4").val(),
+						$("#q5").val(),
+						$("#q6").val(),
+						$("#q7").val(),
+						$("#q8").val(),
+						$("#q9").val(),
+						$("#q10").val()
+					]
+				};
+
+				$.post("/api/friends", userData, function(data) {
+					console.log(data);
+
+					$("#matchName").text(data.name);
+					$("#matchImg").attr("src", data.photo);
+
+					$("#results-modal").modal("toggle");
+				});
+			} else {
+				alert("Please fully complete the survey!")
+			}
+
+			$(".form-control").val("");
+			$(".chosen-select").val("default");
+		})
+
+	</script>
+</body>

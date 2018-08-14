@@ -11,6 +11,12 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, ".app/public")));
+
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
+
+// Starts server and displays which port the app is listening on
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
